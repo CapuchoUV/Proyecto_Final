@@ -2,7 +2,7 @@
 
 Sistema de monitoreo de temperatura y humedad usando Raspberry Pi, sensor DHT y pantalla LCD, con almacenamiento en base de datos MySQL.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto lee datos de temperatura y humedad de un sensor DHT conectado a un GrovePi, muestra los valores en una pantalla LCD RGB y los almacena en una base de datos MySQL para su análisis posterior.
 
@@ -14,7 +14,7 @@ Este proyecto lee datos de temperatura y humedad de un sensor DHT conectado a un
 - Pantalla LCD RGB Grove
 - Cables de conexión Grove
 
-## 📦 Requisitos de Software
+## Requisitos de Software
 
 ```bash
 # Librerías de Python
@@ -35,7 +35,7 @@ pip install mysql-connector-python
 pip install mysqlclient
 ```
 
-## 🗄️ Configuración de la Base de Datos
+## Configuración de la Base de Datos
 
 Crear la base de datos y tabla en MySQL:
 
@@ -60,12 +60,12 @@ GRANT ALL PRIVILEGES ON tempmds.* TO 'helman'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-## 🔌 Conexiones de Hardware
+## Conexiones de Hardware
 
 - **Sensor DHT**: Conectar al puerto **D7** del GrovePi
 - **Pantalla LCD RGB**: Conectar a un puerto **I2C** del GrovePi
 
-## ⚙️ Configuración del Código
+## Configuración del Código
 
 Antes de ejecutar, ajusta estos parámetros según tu configuración:
 
@@ -82,7 +82,7 @@ conexion = MySQLdb.connect(
 )
 ```
 
-## 🚀 Uso
+## Uso
 
 Ejecutar el programa:
 
@@ -92,7 +92,7 @@ python3 temp_humidity_monitor.py
 
 Para detener el programa, presiona `Ctrl + C`.
 
-## 📊 Funcionamiento
+## Funcionamiento
 
 1. **Lectura**: El sensor DHT lee temperatura y humedad cada 0.05 segundos
 2. **Visualización**: Los datos se muestran en la pantalla LCD con fondo verde
@@ -113,7 +113,7 @@ El programa maneja automáticamente:
 - Errores de conexión a la base de datos
 - Interrupciones del usuario (Ctrl+C)
 
-## 📝 Ejemplo de Salida
+## Ejemplo de Salida
 
 temp = 25.0 C    humidity = 60.0 %
 Datos guardados: Temp = 25.0 C, Humedad = 60.0 %
